@@ -42,6 +42,7 @@
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
+  align-items: left;
 }
 
 .owner-signup-container h2 {

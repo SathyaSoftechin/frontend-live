@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  gap: 15px; /* FIXED: reduced gap */
-  padding: 30px 20px;
+  gap: 25px;
+  padding: 20px;
   background: #f5f5f5;
   box-sizing: border-box;
 }
@@ -14,17 +14,17 @@
 .owner-signup-image {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* FIXED: brings image closer */
+  justify-content: center;
   align-items: center;
 }
 
 .owner-signup-image img {
   width: 100%;
-  max-width: 520px;
-  height: 520px;
+  max-width: 450px; /* smaller */
+  height: 450px; /* smaller */
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   border: 2px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -32,35 +32,36 @@
 .owner-signup-container {
   flex: 1;
   width: 100%;
-  max-width: 420px;
-  margin: 0; /* FIXED: removed extra margin */
-  padding: 25px 22px;
+  max-width: 380px; /* smaller */
+  margin: 0;
+  padding: 22px 20px;
   background: #f9fdff;
-  border: 1px solid rgba(0, 0, 0, 0.103);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
 
 .owner-signup-container h2 {
-  font-size: 24px;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 700;
 }
 
 /* ================= FORM ================= */
 .owner-signup-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .owner-signup-form input,
 .owner-signup-form select {
-  padding: 12px 15px;
-  font-size: 16px;
+  padding: 11px 14px;
+  font-size: 15px;
   border-radius: 8px;
   border: 1px solid #50dcf5;
   transition: all 0.3s ease;
@@ -103,19 +104,19 @@
   font-size: 18px;
 }
 
-/* Unified error block */
+/* Error message */
 .error-message {
   color: #e63946;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
 }
 
 .validation-error {
   color: #e63946;
-  font-size: 13px;
-  margin-top: -5px;
+  font-size: 12px;
+  margin-top: -4px;
   text-align: left;
 }
 
@@ -125,28 +126,29 @@
   background-color: #4f46e5;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .owner-signup-form button:hover {
   background-color: #3730a3;
+  transform: scale(1.02);
 }
 
 /* ================= LOGIN LINK ================= */
 .owner-login-link {
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 16px;
+  font-size: 13px;
   color: #555;
 }
 
 .owner-login-link a {
   color: #4f46e5;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .owner-login-link a:hover {
@@ -171,23 +173,24 @@
 
 .otp-modal-content {
   background: #fff;
-  padding: 28px 20px;
+  padding: 24px 18px;
   border-radius: 12px;
   text-align: center;
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
 
 .otp-modal-content h3 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #4f46e5;
+  font-size: 18px;
 }
 
 .otp-modal-content p {
-  margin-bottom: 20px;
-  font-size: 14px;
+  margin-bottom: 18px;
+  font-size: 13px;
   color: #333;
 }
 
@@ -195,21 +198,21 @@
 .otp-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .otp-inputs {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   flex-wrap: wrap;
 }
 
 .otp-inputs input {
-  width: 55px;
-  height: 55px;
-  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
   text-align: center;
   border-radius: 8px;
   border: 1px solid #50dcf5;
@@ -236,7 +239,7 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   color: #fff;
   background-color: #4f46e5;
   transition: background 0.3s ease;
@@ -264,8 +267,8 @@
   border: none;
   color: #4f46e5;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 .resend-section button:disabled {
@@ -285,16 +288,16 @@
   background-color: #f0f8ff;
   border: 1px solid #d1e7ff;
   border-radius: 8px;
-  padding: 12px;
-  margin: 12px 0;
+  padding: 10px;
+  margin: 10px 0;
   text-align: center;
   box-sizing: border-box;
 }
 
 .test-otp-info p {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   color: #0066cc;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .test-otp-info code {
@@ -309,15 +312,29 @@
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 7px 14px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  margin-top: 8px;
+  font-size: 13px;
+  margin-top: 6px;
 }
 
 .test-otp-btn:hover {
   background-color: #45a049;
+}
+
+/* =========================
+   TABLET VIEW (≤ 900px)
+========================= */
+@media (max-width: 900px) {
+  .owner-signup-image img {
+    max-width: 380px;
+    height: 380px;
+  }
+
+  .owner-signup-container {
+    max-width: 350px;
+  }
 }
 
 /* =========================
@@ -326,63 +343,23 @@
 @media (max-width: 768px) {
   .owner-signup-page {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
-  }
-
-  .owner-signup-image {
-    justify-content: center;
+    gap: 18px;
+    padding: 18px 10px;
   }
 
   .owner-signup-image img {
-    max-width: 360px;
-    height: 280px;
+    max-width: 340px;
+    height: 260px;
   }
 
   .owner-signup-container {
     width: 92%;
     max-width: 360px;
-    margin: 0 auto; /* FIXED */
-    padding: 20px 16px;
-    border-radius: 14px;
-    margin-top: 10px !important;
+    padding: 18px 16px;
   }
 
   .owner-signup-container h2 {
     font-size: 20px;
-    margin-bottom: 18px;
-  }
-
-  .owner-signup-form input,
-  .owner-signup-form select {
-    font-size: 15px;
-    padding: 11px 12px;
-  }
-
-  .valid-tick {
-    font-size: 16px;
-    right: 10px;
-  }
-
-  .owner-signup-form button {
-    font-size: 15px;
-    padding: 12px;
-  }
-
-  .owner-login-link {
-    font-size: 13px;
-    margin-top: 15px;
-  }
-
-  .otp-modal-content {
-    padding: 20px 15px;
-    width: 100%;
-  }
-
-  .otp-inputs input {
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
   }
 
   .otp-actions {
@@ -399,20 +376,18 @@
 ========================= */
 @media (max-width: 480px) {
   .owner-signup-image img {
-    max-width: 320px;
-    height: 250px;
+    max-width: 300px;
+    height: 230px;
   }
 
   .owner-signup-container {
-    width: 94%;
+    width: 95%;
     max-width: 330px;
-    margin: 0 auto;
-    padding: 18px 14px;
-    margin-top: 10px !important;
+    padding: 16px 14px;
   }
 
   .owner-signup-container h2 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .owner-signup-form input,
@@ -425,17 +400,12 @@
   }
 
   .otp-inputs input {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     font-size: 17px;
   }
 
-  .otp-modal-content h3 {
-    font-size: 16px;
-  }
-
-  .test-otp-info p,
-  .resend-section button {
-    font-size: 12px;
+  .otp-modal-content {
+    padding: 18px 14px;
   }
 }

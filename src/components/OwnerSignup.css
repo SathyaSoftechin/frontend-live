@@ -1,420 +1,173 @@
-/* ================= PAGE LAYOUT (IMAGE + FORM) ================= */
+/* ================= FULL PAGE CENTER ================= */
 .owner-signup-page {
   width: 100%;
-  min-height: 100vh; /* full screen height */
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center; /* vertical center */
+  min-height: 100vh;
+  display: grid;
+  place-items: center; /* PERFECT CENTER */
   background: #f5f5f5;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* ================= LEFT IMAGE SECTION ================= */
+/* ================= MAIN WRAPPER ================= */
+.owner-signup-wrapper {
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* image + form */
+  gap: 15px; /* closer gap */
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= IMAGE BOX ================= */
 .owner-signup-image {
-  flex: 1;
   display: flex;
-  justify-content: flex-end; /* 🔥 pushes image closer */
+  justify-content: center;
   align-items: center;
 }
 
 .owner-signup-image img {
   width: 100%;
-  max-width: 460px;
-  height: 460px;
+  max-width: 520px;
+  height: 520px;
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.15);
 }
 
-/* ================= CONTAINER ================= */
+/* ================= FORM BOX ================= */
 .owner-signup-container {
-  flex: 1;
   width: 100%;
-  max-width: 390px;
-  margin: 0;
-  padding: 22px 20px;
+  max-width: 450px;
   background: #f9fdff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  padding: 28px 25px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.12);
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   box-sizing: border-box;
 }
 
-/* Title */
+/* ================= TITLE ================= */
 .owner-signup-container h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #222;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  color: #111;
 }
 
 /* ================= FORM ================= */
 .owner-signup-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-.owner-signup-form input,
-.owner-signup-form select {
-  padding: 11px 14px;
-  font-size: 15px;
-  border-radius: 8px;
-  border: 1px solid #50dcf5;
-  transition: all 0.3s ease;
+.owner-signup-form input {
   width: 100%;
-  box-sizing: border-box;
-}
-
-/* Focus glow */
-.owner-signup-form input:focus,
-.owner-signup-form select:focus {
-  border-color: #4f46e5;
+  padding: 13px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #50dcf5;
   outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.owner-signup-form input:focus {
+  border-color: #4f46e5;
   box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
-}
-
-/* Valid input */
-.valid-input {
-  border-color: #22c55e !important;
-  box-shadow: 0 0 5px rgba(34, 197, 94, 0.4);
-}
-
-/* Invalid input */
-.invalid-input {
-  border-color: #e63946 !important;
-  box-shadow: 0 0 5px rgba(230, 57, 70, 0.3);
-}
-
-/* Valid tick beside input */
-.input-with-status {
-  position: relative;
-}
-
-.valid-tick {
-  color: #22c55e;
-  font-weight: bold;
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-}
-
-/* Error message */
-.error-message {
-  color: #e63946;
-  margin-top: 8px;
-  font-weight: 500;
-  font-size: 13px;
-  text-align: left;
-}
-
-.validation-error {
-  color: #e63946;
-  font-size: 12px;
-  margin-top: -4px;
-  text-align: left;
 }
 
 /* ================= BUTTON ================= */
 .owner-signup-form button {
-  padding: 12px 0;
-  background-color: #4f46e5;
-  color: #fff;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #4f46e5;
+  color: white;
   border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .owner-signup-form button:hover {
-  background-color: #3730a3;
+  background: #3730a3;
   transform: scale(1.02);
 }
 
 /* ================= LOGIN LINK ================= */
 .owner-login-link {
-  margin-top: 16px;
-  font-size: 13px;
-  color: #555;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #444;
 }
 
 .owner-login-link a {
   color: #4f46e5;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .owner-login-link a:hover {
   text-decoration: underline;
 }
 
-/* ================= OTP MODAL ================= */
-.otp-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  padding: 10px;
-  box-sizing: border-box;
+/* ================= VALID / INVALID INPUT ================= */
+.valid-input {
+  border-color: #22c55e !important;
 }
 
-.otp-modal-content {
-  background: #fff;
-  padding: 24px 18px;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 380px;
-  width: 100%;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
+.invalid-input {
+  border-color: #e63946 !important;
 }
 
-.otp-modal-content h3 {
-  margin-bottom: 12px;
-  color: #4f46e5;
-  font-size: 18px;
-}
-
-.otp-modal-content p {
-  margin-bottom: 18px;
+/* ================= ERROR MESSAGE ================= */
+.error-message {
+  color: #e63946;
   font-size: 13px;
-  color: #333;
+  text-align: left;
+  margin-top: -10px;
 }
 
-/* OTP Inputs */
-.otp-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+/* ================= RESPONSIVE ================= */
 
-.otp-inputs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
-}
-
-.otp-inputs input {
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  text-align: center;
-  border-radius: 8px;
-  border: 1px solid #50dcf5;
-  transition: all 0.3s ease;
-}
-
-.otp-inputs input:focus {
-  border-color: #4f46e5;
-  outline: none;
-  box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
-}
-
-/* OTP Buttons */
-.otp-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.otp-actions button {
-  padding: 12px 0;
-  width: 48%;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  color: #fff;
-  background-color: #4f46e5;
-  transition: background 0.3s ease;
-}
-
-.otp-actions button:hover {
-  background-color: #3730a3;
-}
-
-.otp-cancel-btn {
-  background-color: #888;
-}
-
-.otp-cancel-btn:hover {
-  background-color: #555;
-}
-
-/* Resend Section */
-.resend-section {
-  margin-top: 10px;
-}
-
-.resend-section button {
-  background: transparent;
-  border: none;
-  color: #4f46e5;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.resend-section button:disabled {
-  color: #aaa;
-  cursor: not-allowed;
-}
-
-/* OTP error */
-.otp-error-message {
-  color: red;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-/* Test OTP info */
-.test-otp-info {
-  background-color: #f0f8ff;
-  border: 1px solid #d1e7ff;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.test-otp-info p {
-  margin: 0 0 6px 0;
-  color: #0066cc;
-  font-size: 13px;
-}
-
-.test-otp-info code {
-  background-color: #e6f2ff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  color: #0052cc;
-}
-
-.test-otp-btn {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 7px 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 13px;
-  margin-top: 6px;
-}
-
-.test-otp-btn:hover {
-  background-color: #45a049;
-}
-
-/* =========================
-   TABLET VIEW (≤ 900px)
-========================= */
+/* Tablet */
 @media (max-width: 900px) {
-  .owner-signup-page {
-    gap: 10px;
+  .owner-signup-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 18px;
   }
 
   .owner-signup-image img {
-    max-width: 380px;
-    height: 380px;
+    max-width: 420px;
+    height: 320px;
   }
 
   .owner-signup-container {
-    max-width: 350px;
+    max-width: 420px;
   }
 }
 
-/* =========================
-   MOBILE VIEW (≤ 768px)
-========================= */
-@media (max-width: 768px) {
-  .owner-signup-page {
-    flex-direction: column;
-    gap: 16px;
-    padding: 18px 10px;
-  }
-
-  .owner-signup-image {
-    justify-content: center;
-  }
-
+/* Mobile */
+@media (max-width: 600px) {
   .owner-signup-image img {
-    max-width: 340px;
-    height: 260px;
-  }
-
-  .owner-signup-container {
-    width: 92%;
-    max-width: 360px;
-    padding: 18px 16px;
-  }
-
-  .owner-signup-container h2 {
-    font-size: 20px;
-  }
-
-  .otp-actions {
-    flex-direction: column;
-  }
-
-  .otp-actions button {
-    width: 100%;
-  }
-}
-
-/* =========================
-   SMALL MOBILE VIEW (≤ 480px)
-========================= */
-@media (max-width: 480px) {
-  .owner-signup-image img {
-    max-width: 300px;
-    height: 230px;
+    max-width: 320px;
+    height: 240px;
   }
 
   .owner-signup-container {
     width: 95%;
-    max-width: 330px;
-    padding: 16px 14px;
+    max-width: 360px;
+    padding: 22px 18px;
   }
 
   .owner-signup-container h2 {
-    font-size: 18px;
-  }
-
-  .owner-signup-form input,
-  .owner-signup-form select {
-    font-size: 14px;
-  }
-
-  .owner-signup-form button {
-    font-size: 14px;
-  }
-
-  .otp-inputs input {
-    width: 42px;
-    height: 42px;
-    font-size: 17px;
-  }
-
-  .otp-modal-content {
-    padding: 18px 14px;
+    font-size: 22px;
   }
 }

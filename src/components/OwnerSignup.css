@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  gap: 12px;
+  gap: 12px; /* 🔥 reduced gap */
   padding: 20px;
   background: #f5f5f5;
   box-sizing: border-box;
@@ -14,14 +14,14 @@
 .owner-signup-image {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: left;
+  justify-content: flex-end; /* 🔥 pushes image closer */
+  align-items: center;
 }
 
 .owner-signup-image img {
   width: 100%;
-  max-width: 450px; /* smaller */
-  height: 450px; /* smaller */
+  max-width: 460px;
+  height: 460px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -32,7 +32,7 @@
 .owner-signup-container {
   flex: 1;
   width: 100%;
-  max-width: 380px; /* smaller */
+  max-width: 390px;
   margin: 0;
   padding: 22px 20px;
   background: #f9fdff;
@@ -44,6 +44,7 @@
   box-sizing: border-box;
 }
 
+/* Title */
 .owner-signup-container h2 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -327,6 +328,10 @@
    TABLET VIEW (≤ 900px)
 ========================= */
 @media (max-width: 900px) {
+  .owner-signup-page {
+    gap: 10px;
+  }
+
   .owner-signup-image img {
     max-width: 380px;
     height: 380px;
@@ -343,8 +348,12 @@
 @media (max-width: 768px) {
   .owner-signup-page {
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
     padding: 18px 10px;
+  }
+
+  .owner-signup-image {
+    justify-content: center;
   }
 
   .owner-signup-image img {

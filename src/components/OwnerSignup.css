@@ -1,12 +1,12 @@
 /* ================= PAGE LAYOUT (IMAGE + FORM) ================= */
 .owner-signup-page {
+  width: 100%;
+  min-height: 100vh; /* full screen height */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  gap: 12px; /* 🔥 reduced gap */
-  padding: 20px;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
   background: #f5f5f5;
+  padding: 20px;
   box-sizing: border-box;
 }
 

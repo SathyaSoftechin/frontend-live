@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  gap: 40px;
+  gap: 15px; /* FIXED: reduced gap */
   padding: 30px 20px;
   background: #f5f5f5;
   box-sizing: border-box;
@@ -14,7 +14,7 @@
 .owner-signup-image {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* FIXED: brings image closer */
   align-items: center;
 }
 
@@ -33,7 +33,7 @@
   flex: 1;
   width: 100%;
   max-width: 420px;
-  margin: 40px auto;
+  margin: 0; /* FIXED: removed extra margin */
   padding: 25px 22px;
   background: #f9fdff;
   border: 1px solid rgba(0, 0, 0, 0.103);
@@ -330,6 +330,10 @@
     padding: 20px 10px;
   }
 
+  .owner-signup-image {
+    justify-content: center;
+  }
+
   .owner-signup-image img {
     max-width: 360px;
     height: 280px;
@@ -338,7 +342,7 @@
   .owner-signup-container {
     width: 92%;
     max-width: 360px;
-    margin: 25px auto;
+    margin: 0 auto; /* FIXED */
     padding: 20px 16px;
     border-radius: 14px;
     margin-top: 10px !important;
@@ -402,7 +406,7 @@
   .owner-signup-container {
     width: 94%;
     max-width: 330px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 18px 14px;
     margin-top: 10px !important;
   }

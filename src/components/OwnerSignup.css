@@ -1,14 +1,16 @@
 /* ================= CONTAINER ================= */
 .owner-signup-container {
-  max-width: 450px;
-  margin: 50px auto;
-  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 25px 22px;
   background: #f9fdff;
   border: 1px solid rgba(0, 0, 0, 0.103);
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 .owner-signup-container h2 {
@@ -132,16 +134,19 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .otp-modal-content {
   background: #fff;
-  padding: 30px;
+  padding: 28px 20px;
   border-radius: 12px;
   text-align: center;
   max-width: 400px;
-  width: 90%;
+  width: 100%;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .otp-modal-content h3 {
@@ -164,15 +169,16 @@
 
 .otp-inputs {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .otp-inputs input {
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
   text-align: center;
   border-radius: 8px;
   border: 1px solid #50dcf5;
@@ -190,6 +196,7 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .otp-actions button {
@@ -241,7 +248,8 @@
   margin-bottom: 10px;
   font-weight: 500;
 }
-/* Add to OwnerSignup.css */
+
+/* Test OTP info */
 .test-otp-info {
   background-color: #f0f8ff;
   border: 1px solid #d1e7ff;
@@ -249,6 +257,7 @@
   padding: 12px;
   margin: 12px 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .test-otp-info p {
@@ -284,30 +293,24 @@
    MOBILE VIEW (≤ 768px)
 ========================= */
 @media (max-width: 768px) {
-
-  /* ===== SIGNUP CONTAINER ===== */
   .owner-signup-container {
-    max-width: 83%;
-    margin: 30px 15px;
-    padding: 20px 20px;
+    width: 92%;
+    max-width: 360px;
+    margin: 25px auto;
+    padding: 20px 16px;
     border-radius: 14px;
-    margin-top: 130px !important;
+    margin-top: 120px !important;
   }
 
   .owner-signup-container h2 {
-    font-size: 21px;
-    margin-bottom: 20px;
-  }
-
-  /* ===== FORM ===== */
-  .owner-signup-form {
-    gap: 14px;
+    font-size: 20px;
+    margin-bottom: 18px;
   }
 
   .owner-signup-form input,
   .owner-signup-form select {
     font-size: 15px;
-    padding: 11px 14px;
+    padding: 11px 12px;
   }
 
   .valid-tick {
@@ -315,97 +318,50 @@
     right: 10px;
   }
 
-  .error-message {
-    font-size: 13px;
-  }
-
-  .validation-error {
-    font-size: 12px;
-  }
-
-  /* ===== BUTTON ===== */
   .owner-signup-form button {
     font-size: 15px;
     padding: 12px;
   }
 
-  /* ===== LOGIN LINK ===== */
   .owner-login-link {
     font-size: 13px;
-    margin-top: 16px;
+    margin-top: 15px;
   }
 
-  /* ===== OTP MODAL ===== */
   .otp-modal-content {
-    padding: 22px;
-    width: 95%;
-    border-radius: 12px;
-  }
-
-  .otp-modal-content h3 {
-    font-size: 18px;
-  }
-
-  .otp-modal-content p {
-    font-size: 13px;
-  }
-
-  /* OTP Inputs */
-  .otp-inputs {
-    gap: 8px;
-    justify-content: center;
+    padding: 20px 15px;
+    width: 100%;
   }
 
   .otp-inputs input {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
   }
 
-  /* OTP Buttons */
   .otp-actions {
     flex-direction: column;
-    gap: 12px;
   }
 
   .otp-actions button {
     width: 100%;
-    font-size: 15px;
-    padding: 12px;
-  }
-
-  /* Resend */
-  .resend-section button {
-    font-size: 13px;
-  }
-
-  /* ===== TEST OTP INFO ===== */
-  .test-otp-info {
-    padding: 10px;
-  }
-
-  .test-otp-info p {
-    font-size: 13px;
-  }
-
-  .test-otp-btn {
-    font-size: 13px;
-    padding: 8px 14px;
   }
 }
 
 /* =========================
-   SMALL MOBILE (≤ 480px)
+   SMALL MOBILE VIEW (≤ 480px)
 ========================= */
 @media (max-width: 480px) {
-
   .owner-signup-container {
-    margin: 20px 12px;
-    padding: 20px 16px;
+    width: 94%;
+    max-width: 330px;
+    margin: 20px auto;
+    padding: 18px 14px;
+    margin-top: 110px !important;
   }
 
   .owner-signup-container h2 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .owner-signup-form input,
@@ -418,13 +374,13 @@
   }
 
   .otp-inputs input {
-    width: 42px;
-    height: 42px;
-    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
   }
 
   .otp-modal-content h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .test-otp-info p,

@@ -4,7 +4,7 @@ import "./OwnerSignup.css";
 import api from "../api.jsx";
 
 // ✅ Import Image
-import ownerSignupImg from "../assets/ownersignup.jpg";
+import ownerSignupImg from "../assets/ownersignup.jpeg";
 
 const OwnerSignup = () => {
   const navigate = useNavigate();
